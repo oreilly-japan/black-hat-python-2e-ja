@@ -10,7 +10,7 @@ import struct
 
 class IP(Structure):
     _fields_ = [
-         ("version",       c_ubyte,   4),       # 4 bit unsigned char
+         ("ver",           c_ubyte,   4),       # 4 bit unsigned char
          ("ihl",           c_ubyte,   4),       # 4 bit unsigned char
          ("tos",           c_ubyte,   8),       # 1 byte unsigned char
          ("len",           c_ushort, 16),       # 2 byte unsigned short
