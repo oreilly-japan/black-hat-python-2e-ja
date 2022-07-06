@@ -25,4 +25,56 @@
 
 ## 正誤表
 
-まだありません。誤植など間違いを見つけた方は、japan@oreilly.co.jpまでお知らせください。
+下記の誤りがありました。お詫びして訂正いたします。
+
+本ページに掲載されていない誤植など間違いを見つけた方は、japan@oreilly.co.jpまでお知らせください。
+
+### 第1刷
+
+#### ■6章 P.134 L.20
+**誤**
+```
+        else:
+            sites = list()
+            if response.get('webPages'):
+                sites = response['webPages']['value']
+            if len(sites):
+                for site in sites:
+                    print('*'*100)  # ❺
+                    print('Name: %s       ' % site['name'])
+                    print('URL: %s        ' % site['url'])
+                    print('Description: %r' % site['snippet'])
+                    print('*'*100)
+
+                    java_url = URL(site['url'])
+                    if not self._callbacks.isInScope(java_url):  # ❻
+                        print('Adding %s to Burp scope' % site['url'])
+                        self._callbacks.includeInScope(java_url)
+                    else:
+                        print('Empty response from Bing.: %s'
+                                % bing_query_string)
+        return
+```
+**正**
+```
+        else:
+            sites = list()
+            if response.get('webPages'):
+                sites = response['webPages']['value']
+            if len(sites):
+                for site in sites:
+                    print('*'*100)  # ❺
+                    print('Name: %s       ' % site['name'])
+                    print('URL: %s        ' % site['url'])
+                    print('Description: %r' % site['snippet'])
+                    print('*'*100)
+
+                    java_url = URL(site['url'])
+                    if not self._callbacks.isInScope(java_url):  # ❻
+                        print('Adding %s to Burp scope' % site['url'])
+                        self._callbacks.includeInScope(java_url)
+            else:
+                print('Empty response from Bing.: %s'
+                        % bing_query_string)
+        return
+```
