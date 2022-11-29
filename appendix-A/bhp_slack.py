@@ -19,7 +19,7 @@ SLACK_APP_TOKEN = 'xapp-<your App-Level Access Token>'
 SLACK_BOT_TOKEN = 'xoxb-<your Bot User OAuth Access Token>'
 app = App(token=SLACK_BOT_TOKEN)
 mychannel = ''
-     
+
 def conversations_create(name):
     parameters = {'token': SLACK_BOT_TOKEN, 'name': name}
     res = requests.post(SLACK_URL + 'conversations.create', data=parameters)
