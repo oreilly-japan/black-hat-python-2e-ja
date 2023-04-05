@@ -108,3 +108,6 @@ def build_help():
            "help: Display this help.")
     return res
 ```
+
+## Twitter APIのプラン改訂について
+Twitter社のAPIアクセスプランの改訂により、フリーAPIを用いてのツイート取得ができなくなることが[アナウンスされています](https://twitter.com/TwitterDev/status/1641222782594990080)。本書の付録C「Twitter IoCクローラー」に記載した手法を引き続きご利用になりたい方は、「Basic」以上の有償プランへの加入が必要になります。詳しくは[Twitter社のホームページ](https://developer.twitter.com/en/portal/products/basic)をご確認ください。
